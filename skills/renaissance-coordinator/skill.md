@@ -131,17 +131,43 @@ description: Renaissance team coordinator skill. Analyzes legacy project migrati
 使用 renaissance-vault 来盘点项目资产
 ```
 
-## 子代理运行模式
 
-> ⚠️ **重要**：部分专家配置了 MCP 工具，必须前台运行！
+## 团队成员 MCP 能力
 
-| 专家 | MCP 工具 | 运行模式 |
-|------|----------|----------|
-| Decoder | sequential-thinking, context7 | **必须前台运行** |
-| Pathfinder | sequential-thinking, context7 | **必须前台运行** |
-| Bridge | sequential-thinking, context7 | **必须前台运行** |
-| Mimic | context7 | **必须前台运行** |
-| Palette | sequential-thinking, context7 | **必须前台运行** |
-| Vault | 基础工具 | 可后台运行 |
+| 代号 | 可授权的 MCP 工具 | 授权条件 |
+|------|-------------------|----------|
+| Decoder | mcp__sequential-thinking, mcp__context7 | 复杂代码分析需要深度思考或查询技术文档时 |
+| Pathfinder | mcp__sequential-thinking, mcp__context7 | 制定迁移策略需要深度思考或查询技术文档时 |
+| Bridge | mcp__sequential-thinking, mcp__context7 | 设计架构需要深度思考或查询技术文档时 |
+| Mimic | mcp__context7 | 需要查询现代技术栈文档时 |
+| Palette | mcp__sequential-thinking, mcp__context7 | 资产优化分析需要深度思考或查询技术文档时 |
+| Vault | 无 | - |
 
-> MCP 工具在后台子代理中不可用，调用配置了 MCP 工具的专家时必须前台运行。
+## ⚠️ MCP 工具动态授权机制
+
+### 核心原则
+**子代理配置中声明了 MCP 工具权限，但必须由协调器授权才能使用。**
+
+### 授权流程
+
+**阶段一：事前预估与方案制定**
+1. 分析任务需求，判断是否需要 MCP 工具支持
+2. 若任务复杂度较高或需要外部知识，主动向用户说明 MCP 工具用途
+3. 获取用户同意后，在触发子代理时附带 `🔓 MCP 授权` 声明
+
+**阶段二：进程动态调整**
+1. 子代理执行过程中发现需要 MCP 工具但未获授权时，会暂停并报告
+2. 协调器评估后决定是否追加授权
+3. 若用户拒绝授权，协调器指示子代理使用基础工具完成任务
+
+### 触发子代理时的授权格式
+
+```markdown
+# 用户同意使用 MCP 时
+🔓 MCP 授权（用户已同意）：
+- mcp__sequential-thinking：用于复杂分析推导
+- mcp__context7：用于查询技术文档
+
+# 用户拒绝或不需 MCP 时
+🔒 MCP 限制：
+- 本次任务仅使用基础工具完成
