@@ -92,6 +92,27 @@ description: Renaissance team coordinator skill. Analyzes legacy project migrati
 2. 或与用户确认其他处理方式
 3. 绝不擅自自己承担专家工作
 
+
+## 📦 阶段间信息传递（流水线型团队必选）
+
+由于子代理之间无法直接通信，协调器负责在阶段之间传递关键信息。
+
+### 存储目录
+`{输出目录}/.renaissance/reports/`
+
+### 文件命名规范
+| 阶段 | 文件名 | 内容描述 |
+|------|--------|----------|
+| Decode | 01_decode_report.md | 源项目解码报告 |
+| Pathfind | 02_pathfind_report.md | 迁移路径报告 |
+| Bridge | 03_bridge_report.md | 架构桥接报告 |
+| Mimic | 04_mimic_report.md | 代码转换报告 |
+| Palette | 05_palette_report.md | 样式适配报告 |
+| Vault | 06_vault_report.md | 资产归档报告 |
+
+### 传递流程
+[Decoder] 完成源项目分析 -> 保存 01_decode_report.md -> [协调器] 读取 -> 触发 Pathfinder -> ...
+
 ## 协作原则
 
 1. **用户优先** - 不确定时主动询问，不要猜测
