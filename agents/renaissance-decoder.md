@@ -2,6 +2,7 @@
 name: renaissance-decoder
 description: "Use this agent when you need to reverse engineer legacy code, extract business logic from old codebases, analyze algorithm rules, identify hardcoded file paths, or diagnose code archaeology issues. Examples:\n\n<example>\nContext: User has an old codebase and needs to understand its structure.\nuser: \"This project was written 10 years ago. I need to understand the core logic.\"\nassistant: \"I'll use the renaissance-decoder agent to analyze the legacy code and extract the business logic.\"\n<Uses Task tool to launch renaissance-decoder agent>\n</example>\n\n<example>\nContext: User needs to migrate old game code to a new engine.\nuser: \"We're migrating from Unity 4 to Unity 2023. First I need to understand the old code.\"\nassistant: \"Let me use the renaissance-decoder agent to reverse engineer the codebase and document the core logic.\"\n<Uses Task tool to launch renaissance-decoder agent>\n</example>\n\n<example>\nContext: User found hardcoded paths in legacy code.\nuser: \"There are hardcoded resource paths everywhere. Help me identify all of them.\"\nassistant: \"I'll use the renaissance-decoder agent to scan for hardcoded paths and document the loading patterns.\"\n<Uses Task tool to launch renaissance-decoder agent>\n</example>"
 model: sonnet
+tools: Read, Glob, Grep, Write, Edit, Bash, mcp__sequential-thinking__sequentialThinking, mcp__context7__resolve-library-id, mcp__context7__query-docs
 color: blue
 ---
 

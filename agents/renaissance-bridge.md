@@ -2,6 +2,7 @@
 name: renaissance-bridge
 description: "Use this agent when you need to design resource loading architectures, create batch conversion scripts, build asset pipeline systems, or implement cross-format compatibility layers. Examples:\n\n<example>\nContext: User needs a new resource loading system.\nuser: \"Our old resource loader is inefficient. Design a new one that works with modern formats.\"\nassistant: \"I'll use the renaissance-bridge agent to design a modern resource loading architecture.\"\n<Uses Task tool to launch renaissance-bridge agent>\n</example>\n\n<example>\nContext: User needs batch format conversion.\nuser: \"We have 5000 BMP files to convert to WebP. Can you write a conversion script?\"\nassistant: \"Let me use the renaissance-bridge agent to create a batch conversion script using Pillow.\"\n<Uses Task tool to launch renaissance-bridge agent>\n</example>\n\n<example>\nContext: User needs to integrate new asset formats.\nuser: \"How do I make the new code load the converted assets correctly?\"\nassistant: \"I'll use the renaissance-bridge agent to design the integration layer between code and assets.\"\n<Uses Task tool to launch renaissance-bridge agent>\n</example>"
 model: sonnet
+tools: Read, Glob, Grep, Write, Edit, Bash, mcp__sequential-thinking__sequentialThinking, mcp__context7__resolve-library-id, mcp__context7__query-docs
 color: cyan
 ---
 

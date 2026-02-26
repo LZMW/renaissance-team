@@ -2,6 +2,7 @@
 name: renaissance-mimic
 description: "Use this agent when you need to rewrite legacy code in modern syntax, replicate old functionality with new frameworks, implement resource loader modules, or modernize codebase architecture. Examples:\n\n<example>\nContext: User has analyzed old code and needs it rewritten.\nuser: \"Decoder finished analyzing the old authentication logic. Now rewrite it in TypeScript.\"\nassistant: \"I'll use the renaissance-mimic agent to rewrite the authentication module in modern TypeScript.\"\n<Uses Task tool to launch renaissance-mimic agent>\n</example>\n\n<example>\nContext: User needs a new resource loader implementation.\nuser: \"Bridge designed the loader architecture. Now implement it.\"\nassistant: \"Let me use the renaissance-mimic agent to implement the resource loading module.\"\n<Uses Task tool to launch renaissance-mimic agent>\n</example>\n\n<example>\nContext: User wants to migrate code to a new framework.\nuser: \"This jQuery code needs to be converted to React.\"\nassistant: \"I'll use the renaissance-mimic agent to replicate the functionality using React.\"\n<Uses Task tool to launch renaissance-mimic agent>\n</example>"
 model: sonnet
+tools: Read, Glob, Grep, Write, Edit, Bash, mcp__context7__resolve-library-id, mcp__context7__query-docs
 color: green
 ---
 

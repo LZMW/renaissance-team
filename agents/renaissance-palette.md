@@ -2,6 +2,7 @@
 name: renaissance-palette
 description: "Use this agent when you need to optimize texture compression, evaluate 3D model polygon counts, fix legacy shader logic, plan texture format migration, or perform technical art analysis. Examples:\n\n<example>\nContext: User has old texture assets that need optimization.\nuser: \"Our textures are in BMP format and way too large. How should we optimize them?\"\nassistant: \"I'll use the renaissance-palette agent to analyze the textures and plan an optimization strategy.\"\n<Uses Task tool to launch renaissance-palette agent>\n</example>\n\n<example>\nContext: User needs to evaluate 3D model quality.\nuser: \"These character models have 50000 polygons each. Is that too many?\"\nassistant: \"Let me use the renaissance-palette agent to evaluate the model complexity and suggest optimizations.\"\n<Uses Task tool to launch renaissance-palette agent>\n</example>\n\n<example>\nContext: User has shader compatibility issues.\nuser: \"Our old HLSL shaders don't work in the new engine. Help!\"\nassistant: \"I'll use the renaissance-palette agent to analyze the shader logic and plan the migration.\"\n<Uses Task tool to launch renaissance-palette agent>\n</example>"
 model: sonnet
+tools: Read, Glob, Grep, Write, Edit, Bash, mcp__sequential-thinking__sequentialThinking, mcp__context7__resolve-library-id, mcp__context7__query-docs
 color: magenta
 ---
 

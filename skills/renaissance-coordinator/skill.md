@@ -130,3 +130,18 @@ description: Renaissance team coordinator skill. Analyzes legacy project migrati
 使用 renaissance-palette 来优化美术资产
 使用 renaissance-vault 来盘点项目资产
 ```
+
+## 子代理运行模式
+
+> ⚠️ **重要**：部分专家配置了 MCP 工具，必须前台运行！
+
+| 专家 | MCP 工具 | 运行模式 |
+|------|----------|----------|
+| Decoder | sequential-thinking, context7 | **必须前台运行** |
+| Pathfinder | sequential-thinking, context7 | **必须前台运行** |
+| Bridge | sequential-thinking, context7 | **必须前台运行** |
+| Mimic | context7 | **必须前台运行** |
+| Palette | sequential-thinking, context7 | **必须前台运行** |
+| Vault | 基础工具 | 可后台运行 |
+
+> MCP 工具在后台子代理中不可用，调用配置了 MCP 工具的专家时必须前台运行。
