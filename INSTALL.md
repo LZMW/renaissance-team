@@ -43,18 +43,6 @@ C:\Users\[YourUsername]\.claude\skills\renaissance-team\
 确保以下文件结构正确：
 
 ```
-renaissance-team/
-├── README.md                          # ✅ 必需
-├── INSTALL.md                         # ✅ 必需
-├── agents/                            # ✅ 必需目录
-│   ├── renaissance-decoder.md         # ✅ 必需
-│   ├── renaissance-pathfinder.md      # ✅ 必需
-│   ├── renaissance-bridge.md          # ✅ 必需
-│   ├── renaissance-mimic.md           # ✅ 必需
-│   ├── renaissance-palette.md         # ✅ 必需
-│   └── renaissance-vault.md           # ✅ 必需
-└── skills/                            # ✅ 必需目录
-    └── renaissance-coordinator/       # ✅ 必需目录
         └── skill.md                   # ✅ 必需
 ```
 
